@@ -14,7 +14,8 @@ const { data } = useFetch < {
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col gap-5">
     {{ data?.text }}
+    <Counter />
   </div>
 </template>
