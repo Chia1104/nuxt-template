@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "bun:build": "NITRO_PRESET=bun nuxt build",
+    "vercel:build": "NITRO_PRESET=vercel nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
