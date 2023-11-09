@@ -9,9 +9,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "zeabur-sls:post-build": "bun run scripts/zeabur-sls-post-build.mjs",
+    "zeabur-sls:post-build": "node scripts/zeabur-sls-post-build.mjs",
+    "zeabur-sls:bun-post-build": "bun run scripts/zeabur-sls-post-build.mjs",
     "zeabur-sls:build": "pnpm run build && pnpm run zeabur-sls:post-build",
-    "zeabur-sls:bun-build": "bun run bun:build && bun run zeabur-sls:post-build"
+    "zeabur-sls:bun-build": "bun run bun:build && bun run zeabur-sls:bun-post-build"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
