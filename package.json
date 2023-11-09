@@ -4,15 +4,18 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "bun:build": "NITRO_PRESET=bun nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "zeabur-sls:post-build": "node scripts/zeabur-sls-post-build.cjs",
-    "zeabur-sls:build": "nuxt build && pnpm run zeabur-sls:post-build"
+    "zeabur-sls:post-build": "bun run scripts/zeabur-sls-post-build.mjs",
+    "zeabur-sls:build": "pnpm run build && pnpm run zeabur-sls:post-build",
+    "zeabur-sls:bun-build": "bun run bun:build && bun run zeabur-sls:post-build"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "bun-types": "^1.0.11",
     "nuxt": "^3.8.1",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
